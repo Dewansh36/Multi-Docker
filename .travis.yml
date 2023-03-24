@@ -16,7 +16,11 @@ after_success:
   - docker build -t dc/multi-server ./server
   - docker build -t dc/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push dc/multi-client
-  - docker push dc/multi-nginx
-  - docker push dc/multi-server
-  - docker push dc/multi-worker
+  - docker tag dc/multi-client:latest dewansh05/dockerhub:dc/multi-client
+  - docker tag dc/multi-nginx:latest dewansh05/dockerhub:dc/multi-nginx
+  - docker tag dc/multi-server:latest dewansh05/dockerhub:dc/multi-server
+  - docker tag dc/multi-worker:latest dewansh05/dockerhub:dc/multi-worker
+  - docker push dewansh05/dockerhub:dc/multi-client
+  - docker push dewansh05/dockerhub:dc/multi-nginx
+  - docker push dewansh05/dockerhub:dc/multi-server
+  - docker push dewansh05/dockerhub:dc/multi-worker
