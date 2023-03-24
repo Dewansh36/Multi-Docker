@@ -16,7 +16,7 @@ after_success:
   - docker build -t dc/multi-server ./server
   - docker build -t dc/multi-worker ./worker
   - docker login -u "dewansh05" -p "ybcRyqunT!!yp9R" docker.io
-  - docker push dc/multi-client
-  - docker push dc/multi-nginx
-  - docker push dc/multi-server
-  - docker push dc/multi-worker
+  - docker push dewansh05/complex:dc/multi-client
+  - docker push dewansh05/complex:dc/multi-nginx
+  - docker push dewansh05/complex:dc/multi-server
+  - docker push dewansh05/complex:dc/multi-worker
