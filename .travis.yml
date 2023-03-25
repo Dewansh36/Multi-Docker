@@ -12,10 +12,10 @@ script:
 
 after_success:
   #build and push images to docker hub
-  - docker build -t multi-client ./client
-  - docker build -t multi-nginx ./nginx
-  - docker build -t multi-server ./server
-  - docker build -t multi-worker ./worker
+  - docker build -t dewansh05/complex:multi-client ./client
+  - docker build -t dewansh05/complex:multi-nginx ./nginx
+  - docker build -t dewansh05/complex:multi-server ./server
+  - docker build -t dewansh05/complex:multi-worker ./worker
   #login to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #push images to docker hub
