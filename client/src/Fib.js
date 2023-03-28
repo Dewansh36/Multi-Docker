@@ -35,6 +35,7 @@ function Fib() {
 	};
 
 	function renderSeenIndexes() {
+		if(seenIndexes.length === 0) return <div>No indexes seen yet</div>
 		return seenIndexes.map(({ number }) => number).join(', ');
 	}
 
